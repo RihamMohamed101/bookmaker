@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+  <div class="content  " id="over" >
+    <header>
+        <h1 class="text-center  my-5 mx-auto">
+            Bookmarker
+        </h1>
+    </header>
+    
+    
+    <section>
+        <div class="container ">
+            <div class="cont p-3">
+                <h3 class="gradient-text  text-center">Bookmark your favorite sites</h3>
+                <span class="mt-5 d-inline-block">
+                    <i class="fa-solid fa-book me-1"></i>
+                    Site Name
+                </span>
+                <div class="input-cont" id="inputext">
+                    <input type="text" class="form-control mt-2 mb-5 " id="nameSite">
+                </div>
+                <span>
+                    <i class="fa-solid fa-link me-1"></i>
+                    Site URL
+                </span>
+    
+                <div class="input-cont" id="inpturl">
+                    <input type="email" class="form-control mt-2 mb-5" id="urlSite">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-danger px-5 " onclick=" getElements()">submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mt-5">
+        <div class="container">
+            <table class=" table table-light text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+    
+                <tbody id="tbody">
+    
+    
+                </tbody>
+            </table>
+        </div>
+    </footer>
+
+  </div>
+
+
+   <div class="pop  p-3 rounded-3 shadow  "  id="pop">
+            <div class="shape d-flex justify-content-between align-items-center my-2">
+                <div class="color">
+                    <span class="rounded-circle bg-danger"></span>
+                    <span class="rounded-circle bg-success"></span>
+                    <span class="rounded-circle bg-warning"></span>
+                </div>
+            
+                <div class="icon" >
+                     <button onclick="hide()" class="p-3" style="background: none; outline: none; border: none;">
+                        <i class="fa-solid fa-xmark fs-4"></i>
+                     </button>
+                </div>
+            </div>
+            
+            
+            <h4 class="fs-6 my-3">Site Name or Url is not valid, Please follow the rules below :</h4>
+            <div class="cont">
+                <p>
+                   <i class="fa-regular fa-circle-right text-danger me-1"></i>
+                    Site name must contain at least 3 characters
+                </p>
+            
+                <p>
+                  <i class="fa-regular fa-circle-right text-danger me-1"></i>
+                    Site URL must be a valid one
+                </p>
+            </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

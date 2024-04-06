@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #F7ECDE;
+}
+
+::selection {
+    background-color: #FEC260;
+}
+
+header {
+    font-family: "Pacifico", cursive;
+}
+
+header h1 {
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+header h1::after {
+    content: "";
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    background: #FEC260;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .5s;
+} 
+
+header h1:hover::after {
+   height: 70%;
+}
+
+section .container .cont {
+    font-family: "Righteous", sans-serif;
+    border-bottom: 3px dotted ;
+    border-top: 3px dotted;
+}
+
+
+section h3 {
+    position: relative;
+}
+
+section h3::before , section h3::after  {
+    content: "\f02e";
+    font-family: "fontAwesome";
+    margin: 0 5px;
+}
+
+section .container .cont .btn {
+    background-color: #D1512D !important;
+    opacity: .94;
+    transition: .5s;
+}
+
+section .container .cont .btn:hover {
+   opacity: 1;
+}
+
+input { 
+    border-color: #FEC260 !important;
+}
+
+input:focus {
+    
+    box-shadow: 0 0 0 0.25rem rgb(254, 194, 96 , .25) !important ;
+}
+
+.danger:focus {
+    border-color: #EC919A !important;
+    box-shadow: 0 0 0 0.25rem rgb(236, 145, 154 , .25) !important;
+}
+
+.correct:focus {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.25rem rgb(25, 135, 84 , .25) !important;
+}
+
+
+.gradient-text {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+.input-cont {
+    position: relative;
+}
+
+.input-cont.newcontE::before {
+    content: "\f06a";
+    font-family: "fontAwesome";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #EC919A;
+    
+}
+
+.input-cont.newcont::before {
+    content: "\f00c";
+    font-family: "fontAwesome";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #198754;
+
+}
+
+.pop {
+    width: 400px;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    visibility: hidden ;
+    z-index: 3;
+}
+
+@media (max-width:400px) {
+    .pop {
+        width: 100%;
+    }
+}
+
+.pop .shape .color span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
