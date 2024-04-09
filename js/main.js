@@ -69,7 +69,7 @@ if (localStorage.length > 0)
     info = JSON.parse(localStorage.sites);
 }
 
-let getElements = () => {
+function getElements()  {
     
     let obj = {
         name: nameSite.value,
@@ -94,7 +94,7 @@ let getElements = () => {
 
 
 
-let clear = () => {
+function clear ()  {
     nameSite.value = '';
     urlSite.value = '';
     inputext.classList.remove("newcontE");
@@ -110,7 +110,7 @@ let clear = () => {
 }
 
 
-let display = () => {
+function display () {
     let table = '';
     for (let i = 0; i < info.length; i++)
     {
@@ -139,7 +139,7 @@ let display = () => {
 
 
 
- let deleteItem = (i)=> {
+ function deleteItem (i) {
      info.splice(i,1);
      localStorage.setItem("sites", JSON.stringify(info));
      display();
@@ -147,7 +147,7 @@ let display = () => {
 display();
 
 
-let hide = () => {
+function hide  () {
      pop.style.visibility = "hidden";
      overlay.classList.remove("overlay");
 }
