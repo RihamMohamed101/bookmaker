@@ -92,6 +92,8 @@ let getElements = () => {
 }
 
 
+
+
 let clear = () => {
     nameSite.value = '';
     urlSite.value = '';
@@ -146,7 +148,7 @@ display();
 
 
 let hide = () => {
-    pop.style.visibility = "hidden";
+     pop.style.visibility = "hidden";
      overlay.classList.remove("overlay");
 }
 
